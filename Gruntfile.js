@@ -348,7 +348,12 @@ module.exports = function (grunt) {
       unit: {
         configFile: 'karma.conf.js',
         singleRun: true
-      }
+      },
+     travis: {
+        configFile: 'config/karma.conf.js',
+        singleRun: true,
+        browsers: ['PhantomJS']
+    }
     }
   });
 
@@ -390,6 +395,10 @@ module.exports = function (grunt) {
     'rev',
     'usemin'
   ]);
+     
+  // Add a new task for travis
+  grunt.registerTask('test', ['karma:travis']);
+  
 
   grunt.registerTask('default', [
     'newer:jshint',
