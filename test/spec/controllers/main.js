@@ -5,7 +5,7 @@
 //  // load the controller's module
 //  beforeEach(module('learnatorApp'));
 //
-//  var MainCtrl,
+//  var MainCtrl,rr
 //    scope;
 //
 //  // Initialize the controller and a mock scope
