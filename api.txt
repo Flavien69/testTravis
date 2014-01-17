@@ -1,0 +1,62 @@
+SETS
+get                         /sets			            return a list of sets available for the user
+post	                    /sets			            create new set
+put	                        /set/:name		            update a set
+delete	                    /set/:name		            delete a set ( database will keep the last 3 sets removed and only remove their name in the list )
+
+MEMOS
+get                         /set/:name/		            return an array of memos                ?sort=:basic_field
+                                                						                        ?search=:query
+                                                						                        ?:basic_field=:filter
+get	                        /set/:name/memo/:id	        return a memo with the specified :id
+post                    	/set/:name		            create a memo
+put	                        /set/:name/memo/:id	        update a memo
+delete	                    /set/:name/memo/:id	        delete a memo
+
+
+
+
+
+------------------------------------------
+Definitions
+------------------------------------------
+
+####### A memo will have the basic structure below :
+{
+	id: int;
+	name: String;
+	date_added: Date;
+	count_looked_at: int;
+	date_last_looked_at: int;
+	count_knew_it: int;
+	information: Object;
+	type: String;
+}
+
+####### A set will have the basic structure below :
+{
+	name: String;
+	memos: Array[int];	
+} 
+
+####### Some ideas about the information field :
+	
+	- foreign_word :
+		{
+			translation: String;
+			country: String;
+		}
+
+	- group of related words :
+		{
+			words: Array[String];
+			translations: Array[String];
+			description: String;
+		}
+
+	- subject with a link
+
+####### types of fields :
+    - text
+    - link [caption]
+    - 

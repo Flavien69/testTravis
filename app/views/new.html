@@ -1,0 +1,15 @@
+new hihihi 
+
+ Search: <input ng-model="query">
+ 
+ Sort by:
+<select ng-model="orderProp">
+  <option value="name">Alphabetical</option>
+  <option value="age">Newest</option>
+</select>
+ 
+  <ul class="test">
+    <li ng-repeat="phone in phones | filter:query | orderBy:orderProp">
+        <p>{{phone.name}}</p>  - {{phone.snippet}}
+    </li>
+  </ul>

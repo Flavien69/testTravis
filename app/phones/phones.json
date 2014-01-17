@@ -1,0 +1,11 @@
+        [
+         {"name": "Nexus S",
+          "age": "0",
+          "snippet": "Fast just got faster with Nexus S."},
+         {"name": "Motorola 2",
+          "age": "1",   
+          "snippet": "The Next, Next Generation tablet."},
+         {"name": "MOTOROLA",
+          "age": "2",   
+          "snippet": "The Next, Next Generation tablet."}
+       ]
