@@ -25,7 +25,7 @@ describe('Controller: NewCtrl', function () {
     });
   
   it('should set the default value of orderProp model', function() {
-    expect(scope.orderProp).toBe('age');
+    expect(scope.orderProp).toBe('age22');
   });
   
 });
